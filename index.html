@@ -288,11 +288,18 @@ footer
   scale: 250%;
 }
 
-
+#preloader {
+    background: #fff url(imgs/loader3.gif) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+   }
 
         </style>
     </head>
     <body>
+        <div id="preloader"></div>
         <!-- Language Modal -->
         <div class="btnLang">
             <i class="fas fa-globe-africa btnLang" data-bs-toggle="modal" data-bs-target="#arabicLanguage"></i> 
@@ -692,6 +699,10 @@ footer
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
        <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
         // tab
         function openTab(evt, cityName) {
   var i, x, tablinks;
